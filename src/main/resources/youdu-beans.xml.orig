@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="ydEnv" class="im.youdu.wsdk.pojo.YdEnv">
+        <property name="addr" value="localhost:7080"/>
+        <property name="buin" value="19880530"/>
+    </bean>
+
+
+    <bean id="ipFilter" class="im.youdu.wsdk.pojo.IpFilterConfig">
+        <property name="defaultAllow" value="false"/>
+        <property name="allows">
+            <set>
+                <value>10.0.0.30</value>
+            </set>
+        </property>
+        <property name="denies">
+            <set>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="sysmsg" class="im.youdu.wsdk.pojo.YDAppInfo">
+        <property name="appId" value="sysMsgAssistant"/>
+        <property name="name" value="系统消息"/>
+        <property name="aeskey" value="jXMo+DKry3VbQ7Qe7uA3K0kaeO4Mx1+ba0xwl5gt+KU="/>
+        <property name="token" value=""/>
+    </bean>
+
+
+</beans>
